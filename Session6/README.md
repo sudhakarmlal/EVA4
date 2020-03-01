@@ -32,3 +32,6 @@ Missclassified L2:
 
 ![](https://github.com/sudhakarmlal/EVA4/blob/master/Session6/L2Miss.JPG)
 
+
+https://github.com/sudhakarmlal/EVA4/blob/master/Session6/L2Miss.JPG
+
