@@ -1,0 +1,1452 @@
+{
+  "n02085620_3742.jpg35520": {
+    "filename": "n02085620_3742.jpg",
+    "size": 35520,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 39,
+          "y": 29,
+          "width": 530,
+          "height": 376
+        },
+        "region_attributes": {
+          "name": "Dog",
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          }
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "n02085620_3838.jpg35625": {
+    "filename": "n02085620_3838.jpg",
+    "size": 35625,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 43,
+          "y": 6,
+          "width": 359,
+          "height": 320
+        },
+        "region_attributes": {
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          },
+          "Dog": "not_defined"
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "n02085620_6931.jpg29664": {
+    "filename": "n02085620_6931.jpg",
+    "size": 29664,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 51,
+          "y": 66,
+          "width": 378,
+          "height": 261
+        },
+        "region_attributes": {
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          },
+          "Dog": "not_defined"
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "n02085620_8558.jpg10995": {
+    "filename": "n02085620_8558.jpg",
+    "size": 10995,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 38,
+          "y": 27,
+          "width": 154,
+          "height": 150
+        },
+        "region_attributes": {
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          },
+          "Dog": "not_defined"
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "n02088364_129.jpg25171": {
+    "filename": "n02088364_129.jpg",
+    "size": 25171,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 37,
+          "y": 34,
+          "width": 236,
+          "height": 299
+        },
+        "region_attributes": {
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          },
+          "Dog": "not_defined"
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "n02088364_1384.jpg44867": {
+    "filename": "n02088364_1384.jpg",
+    "size": 44867,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 16,
+          "y": 35,
+          "width": 386,
+          "height": 250
+        },
+        "region_attributes": {
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          },
+          "Dog": "not_defined"
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "n02088364_1507.jpg16133": {
+    "filename": "n02088364_1507.jpg",
+    "size": 16133,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 91,
+          "y": 45,
+          "width": 277,
+          "height": 309
+        },
+        "region_attributes": {
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          },
+          "Dog": "not_defined"
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "n02088364_2019.jpg30167": {
+    "filename": "n02088364_2019.jpg",
+    "size": 30167,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 19,
+          "y": 30,
+          "width": 288,
+          "height": 316
+        },
+        "region_attributes": {
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          },
+          "Dog": "not_defined"
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "n02088364_4052.jpg102866": {
+    "filename": "n02088364_4052.jpg",
+    "size": 102866,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 49,
+          "y": 15,
+          "width": 655,
+          "height": 593
+        },
+        "region_attributes": {
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          },
+          "Dog": "not_defined"
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "n02088364_4473.jpg144423": {
+    "filename": "n02088364_4473.jpg",
+    "size": 144423,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 107,
+          "y": 73,
+          "width": 614,
+          "height": 601
+        },
+        "region_attributes": {
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          },
+          "Dog": "not_defined"
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "n02088364_4706.jpg17116": {
+    "filename": "n02088364_4706.jpg",
+    "size": 17116,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 27,
+          "y": 11,
+          "width": 317,
+          "height": 253
+        },
+        "region_attributes": {
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          },
+          "Dog": "not_defined"
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "n02088364_5282.jpg63728": {
+    "filename": "n02088364_5282.jpg",
+    "size": 63728,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 34,
+          "y": 132,
+          "width": 310,
+          "height": 283
+        },
+        "region_attributes": {
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          },
+          "Dog": "not_defined"
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "n02088364_5716.jpg12786": {
+    "filename": "n02088364_5716.jpg",
+    "size": 12786,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 55,
+          "y": 7,
+          "width": 262,
+          "height": 351
+        },
+        "region_attributes": {
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          },
+          "Dog": "not_defined"
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "n02088364_8443.jpg49209": {
+    "filename": "n02088364_8443.jpg",
+    "size": 49209,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 93,
+          "y": 26,
+          "width": 332,
+          "height": 446
+        },
+        "region_attributes": {
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          },
+          "Dog": "not_defined"
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "n02088364_9825.jpg35060": {
+    "filename": "n02088364_9825.jpg",
+    "size": 35060,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 47,
+          "y": 25,
+          "width": 414,
+          "height": 295
+        },
+        "region_attributes": {
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          },
+          "Dog": "not_defined"
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "n02088364_10206.jpg40979": {
+    "filename": "n02088364_10206.jpg",
+    "size": 40979,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 15,
+          "y": 73,
+          "width": 468,
+          "height": 313
+        },
+        "region_attributes": {
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          },
+          "Dog": "not_defined"
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "n02088364_10575.jpg36002": {
+    "filename": "n02088364_10575.jpg",
+    "size": 36002,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 39,
+          "y": 21,
+          "width": 358,
+          "height": 274
+        },
+        "region_attributes": {
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          },
+          "Dog": "not_defined"
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "n02088364_11930.jpg18137": {
+    "filename": "n02088364_11930.jpg",
+    "size": 18137,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 29,
+          "y": 5,
+          "width": 316,
+          "height": 260
+        },
+        "region_attributes": {
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          },
+          "Dog": "not_defined"
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "n02088364_12154.jpg38009": {
+    "filename": "n02088364_12154.jpg",
+    "size": 38009,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 17,
+          "y": 0,
+          "width": 318,
+          "height": 311
+        },
+        "region_attributes": {
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          },
+          "Dog": "not_defined"
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "n02088364_12713.jpg31287": {
+    "filename": "n02088364_12713.jpg",
+    "size": 31287,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 93,
+          "y": 37,
+          "width": 360,
+          "height": 330
+        },
+        "region_attributes": {
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          },
+          "Dog": "not_defined"
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "n02088364_13028.jpg36344": {
+    "filename": "n02088364_13028.jpg",
+    "size": 36344,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 26,
+          "y": 38,
+          "width": 467,
+          "height": 304
+        },
+        "region_attributes": {
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          },
+          "Dog": "not_defined"
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "n02088364_14548.jpg58807": {
+    "filename": "n02088364_14548.jpg",
+    "size": 58807,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 9,
+          "y": 83,
+          "width": 438,
+          "height": 230
+        },
+        "region_attributes": {
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          },
+          "Dog": "not_defined"
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "n02088364_15111.jpg61214": {
+    "filename": "n02088364_15111.jpg",
+    "size": 61214,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 46,
+          "y": 58,
+          "width": 336,
+          "height": 352
+        },
+        "region_attributes": {
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          },
+          "Dog": "not_defined"
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "n02088364_15787.jpg43555": {
+    "filename": "n02088364_15787.jpg",
+    "size": 43555,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 18,
+          "y": 23,
+          "width": 362,
+          "height": 292
+        },
+        "region_attributes": {
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          },
+          "Dog": "not_defined"
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "n02088364_16065.jpg38613": {
+    "filename": "n02088364_16065.jpg",
+    "size": 38613,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 77,
+          "y": 60,
+          "width": 358,
+          "height": 280
+        },
+        "region_attributes": {
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          },
+          "Dog": "not_defined"
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "n02088364_17689.jpg50255": {
+    "filename": "n02088364_17689.jpg",
+    "size": 50255,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 75,
+          "y": 21,
+          "width": 338,
+          "height": 448
+        },
+        "region_attributes": {
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          },
+          "Dog": "not_defined"
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "n02093256_759.jpg55756": {
+    "filename": "n02093256_759.jpg",
+    "size": 55756,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 97,
+          "y": 6,
+          "width": 386,
+          "height": 343
+        },
+        "region_attributes": {
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          },
+          "Dog": "not_defined"
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "n02093256_1275.jpg48388": {
+    "filename": "n02093256_1275.jpg",
+    "size": 48388,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 39,
+          "y": 22,
+          "width": 422,
+          "height": 293
+        },
+        "region_attributes": {
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          },
+          "Dog": "not_defined"
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "n02093256_1384.jpg26021": {
+    "filename": "n02093256_1384.jpg",
+    "size": 26021,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 95,
+          "y": 10,
+          "width": 338,
+          "height": 352
+        },
+        "region_attributes": {
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          },
+          "Dog": "not_defined"
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "n02093256_1505.jpg59418": {
+    "filename": "n02093256_1505.jpg",
+    "size": 59418,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 104,
+          "y": 29,
+          "width": 381,
+          "height": 321
+        },
+        "region_attributes": {
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          },
+          "Dog": "not_defined"
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "n02093256_2405.jpg32429": {
+    "filename": "n02093256_2405.jpg",
+    "size": 32429,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 32,
+          "y": 41,
+          "width": 372,
+          "height": 264
+        },
+        "region_attributes": {
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          },
+          "Dog": "not_defined"
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "n02093256_2763.jpg48863": {
+    "filename": "n02093256_2763.jpg",
+    "size": 48863,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 23,
+          "y": 39,
+          "width": 452,
+          "height": 285
+        },
+        "region_attributes": {
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          },
+          "Dog": "not_defined"
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "n02093256_2780.jpg39191": {
+    "filename": "n02093256_2780.jpg",
+    "size": 39191,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 46,
+          "y": 70,
+          "width": 250,
+          "height": 402
+        },
+        "region_attributes": {
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          },
+          "Dog": "not_defined"
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "n02093256_2975.jpg20117": {
+    "filename": "n02093256_2975.jpg",
+    "size": 20117,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 74,
+          "y": 1,
+          "width": 353,
+          "height": 337
+        },
+        "region_attributes": {
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          },
+          "Dog": "not_defined"
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "n02093256_3323.jpg60176": {
+    "filename": "n02093256_3323.jpg",
+    "size": 60176,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 51,
+          "y": 24,
+          "width": 427,
+          "height": 277
+        },
+        "region_attributes": {
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          },
+          "Dog": "not_defined"
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "n02093256_3614.jpg41955": {
+    "filename": "n02093256_3614.jpg",
+    "size": 41955,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 70,
+          "y": 81,
+          "width": 301,
+          "height": 194
+        },
+        "region_attributes": {
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          },
+          "Dog": "not_defined"
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "n02093256_3799.jpg10539": {
+    "filename": "n02093256_3799.jpg",
+    "size": 10539,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 15,
+          "y": 9,
+          "width": 134,
+          "height": 263
+        },
+        "region_attributes": {
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          },
+          "Dog": "not_defined"
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "n02093256_3906.jpg32650": {
+    "filename": "n02093256_3906.jpg",
+    "size": 32650,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 33,
+          "y": 63,
+          "width": 318,
+          "height": 408
+        },
+        "region_attributes": {
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          },
+          "Dog": "not_defined"
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "n02093256_4036.jpg52574": {
+    "filename": "n02093256_4036.jpg",
+    "size": 52574,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 37,
+          "y": 25,
+          "width": 438,
+          "height": 286
+        },
+        "region_attributes": {
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          },
+          "Dog": "not_defined"
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "n02093256_4263.jpg41724": {
+    "filename": "n02093256_4263.jpg",
+    "size": 41724,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 68,
+          "y": 21,
+          "width": 383,
+          "height": 288
+        },
+        "region_attributes": {
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          },
+          "Dog": "not_defined"
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "n02093256_4658.jpg50090": {
+    "filename": "n02093256_4658.jpg",
+    "size": 50090,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 61,
+          "y": 28,
+          "width": 368,
+          "height": 322
+        },
+        "region_attributes": {
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          },
+          "Dog": "not_defined"
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "n02093256_4678.jpg41013": {
+    "filename": "n02093256_4678.jpg",
+    "size": 41013,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 40,
+          "y": 65,
+          "width": 304,
+          "height": 365
+        },
+        "region_attributes": {
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          },
+          "Dog": "not_defined"
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "n02093256_4874.jpg10579": {
+    "filename": "n02093256_4874.jpg",
+    "size": 10579,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 12,
+          "y": 9,
+          "width": 239,
+          "height": 239
+        },
+        "region_attributes": {
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          },
+          "Dog": "not_defined"
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "n02093256_4972.jpg36400": {
+    "filename": "n02093256_4972.jpg",
+    "size": 36400,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 60,
+          "y": 21,
+          "width": 251,
+          "height": 437
+        },
+        "region_attributes": {
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          },
+          "Dog": "not_defined"
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "n02093256_5007.jpg34131": {
+    "filename": "n02093256_5007.jpg",
+    "size": 34131,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 39,
+          "y": 18,
+          "width": 265,
+          "height": 454
+        },
+        "region_attributes": {
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          },
+          "Dog": "not_defined"
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "n02093256_5600.jpg35531": {
+    "filename": "n02093256_5600.jpg",
+    "size": 35531,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 59,
+          "y": 9,
+          "width": 364,
+          "height": 350
+        },
+        "region_attributes": {
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          },
+          "Dog": "not_defined"
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "n02093256_5647.jpg37169": {
+    "filename": "n02093256_5647.jpg",
+    "size": 37169,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 48,
+          "y": 40,
+          "width": 299,
+          "height": 403
+        },
+        "region_attributes": {
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          },
+          "Dog": "not_defined"
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "n02093256_5734.jpg48310": {
+    "filename": "n02093256_5734.jpg",
+    "size": 48310,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 14,
+          "y": 40,
+          "width": 465,
+          "height": 234
+        },
+        "region_attributes": {
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          },
+          "Dog": "not_defined"
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "n02093256_5791.jpg27828": {
+    "filename": "n02093256_5791.jpg",
+    "size": 27828,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 39,
+          "y": 19,
+          "width": 389,
+          "height": 287
+        },
+        "region_attributes": {
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          },
+          "Dog": "not_defined"
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "n02093256_7043.jpg73430": {
+    "filename": "n02093256_7043.jpg",
+    "size": 73430,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "rect",
+          "x": 47,
+          "y": 57,
+          "width": 282,
+          "height": 361
+        },
+        "region_attributes": {
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          },
+          "Dog": "not_defined"
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  }
+}
