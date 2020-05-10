@@ -1,5 +1,5 @@
 
-## Please Python Code that generates Gallery for  BackGround Scenary,ForeGround,coressponding Masks,ForeGround-Background,ForeGround-BackGround Mask and Depth Model Output images :
+## Python Code for generating gallery for  BackGround Scenary,ForeGround,coressponding Masks,ForeGround-Background,ForeGround-BackGround Mask and Depth Model Output images :
 
 https://github.com/sudhakarmlal/EVA4/blob/master/Session14-15/GalleryUtil.ipynb
 
