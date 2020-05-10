@@ -8,7 +8,7 @@ https://github.com/sudhakarmlal/EVA4/blob/master/Session14-15/GalleryUtil.ipynb
 
 We have taken Home Images as background.Below is the gallery for the Home Images.A sample from the 100 backgrounds taken are shown below
 
-![](https://github.com/sudhakarmlal/EVA/blob/master/Phase2/Session10/images/FlowChartTD3N.JPG)
+![](https://github.com/sudhakarmlal/EVA4/blob/master/Session14-15/Images/BackGrnd.png)
 
 #### 2. ForeGround Images:
 
