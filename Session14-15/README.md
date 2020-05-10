@@ -69,6 +69,57 @@ In total we MUST have:
      ## b. how were masks created for fgs
      
   Masks were created using GIP tool, Full steps with screenshots are given in
+  
+  Creation of the data set Foreground image creation with transparency
+
+ 1) Open foreground image in GIMP    
+
+![](https://github.com/sudhakarmlal/EVA4/blob/master/Session14-15/Images/Screen1.png)  
+
+  2) Open ‘view’ tab on the top menu. Open ‘zoom’, select ‘fit image to window’. As soon as you select it the image you opened will be enlarged to fit into the window 
+  ![](https://github.com/sudhakarmlal/EVA4/blob/master/Session14-15/Images/Screen2.png)    
+
+
+3) Go to ‘Layer’ tab in the top menu. Select ‘Transparency’, Click on’ Add Alpha Chanel”. There will be no visible changes to the image you opened. 
+
+  ![](https://github.com/sudhakarmlal/EVA4/blob/master/Session14-15/Images/Screen3.png)    
+
+  4) Select on’ Fuzzy Select tool’ on the tools section on your left top. Make a border on the image you opened. If you have made a border but it is not covering the whole image, then Shift + click on the part where there is no border. There will be a border on the image you opened. 
+
+  ![](https://github.com/sudhakarmlal/EVA4/blob/master/Session14-15/Images/Screen4.png)    
+
+
+
+5) Go to ‘edit’ tab on the top menu. Click on ‘clear’.. As soon as you click it the background of the image will be cleared. 
+
+  ![](https://github.com/sudhakarmlal/EVA4/blob/master/Session14-15/Images/Screen5.png)    
+
+
+6) Your foreground image is ready. Now it is time to export the file. For exporting go to ‘file’ tab on the top menu. Click on ‘export as’. As soon as you click a new window will appear. On the window you have to select the location where you have to export the file. If you want to change the image type then you have to go to ’select file type (by extension)’ and press ‘export’. Then you will be prompted by another window. Just press ‘export’ and the image will be exported 
+  ![](https://github.com/sudhakarmlal/EVA4/blob/master/Session14-15/Images/Screen6.png)    
+
+
+
+Mask image creation 
+
+1) for mask you can work on the same image you cleared the background. So first go to edit. Click on ’Fill with BG colour. BG stands for background. As soon as you click the background will become black. If the background does not become black press the exchange button on the tool section. It will exchange BG colour with FG colour    
+
+  ![](https://github.com/sudhakarmlal/EVA4/blob/master/Session14-15/Images/Screen7.png)    
+
+  2) Go to ‘select’ in the top menu. Click on ‘invert’. There will be no visible changes to the image. 
+
+3) Go to ‘edit’ in the top menu. Click on ‘Fill with FG colour. FG stands for foreground. As soon as you do that the image will become white. If the image does not become white press the exchange button on the tool section. It will exchange BG colour with FG colour. 
+
+  ![](https://github.com/sudhakarmlal/EVA4/blob/master/Session14-15/Images/Screen8.png)    
+
+
+  4) Your mask is ready. Now it is time to export the file. For exporting go to ‘file’ tab on the top menu. Click on ‘export as’. As soon as you click a new window will appear. On the window you have to select the location where you have to export the file. If you want to change the image type then you have to go to ’select file type (by extension)’ and press ‘export’. Then you will be prompted by another window. Just press ‘export’ and the image will be exported   
+
+  ![](https://github.com/sudhakarmlal/EVA4/blob/master/Session14-15/Images/Screen9.png)  
+  
+  
+  The PDF file for the same is also available at
+  
    https://github.com/monimoyd/15A_Generate_Mask_Depth_Dataset/blob/master/ImageCreationSteps.pdf
 		
 
