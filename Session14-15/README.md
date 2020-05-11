@@ -56,12 +56,14 @@ In total we MUST have:
         The total size of the dataset: 6 GB
         Mean/STD values: 
 		
-	ImageType : bg_jpg  Mean : 0.739088,  Std :  0.265235
-        ImageType : depth_fg_bg_jpg  Mean : 0.776709,  Std :  0.312767
-        ImageType : fg_bg_jpg  Mean : 0.727454,  Std :  0.275896
-        ImageType : fg_jpg  Mean : 0.822849,  Std :  0.299034
-        ImageType : mask_black_jpg  Mean : 0.084384,  Std :  0.275301
-        ImageType : mask_jpg  Mean : 0.337507,  Std :  0.464947
+	
+	Category : bg_jpg  Mean : 0.739088,  Std :  0.265235	
+	Category : depth_fg_bg_jpg  Mean : 0.777681,  Std :  0.311899
+	Category : fg_bg_jpg  Mean : 0.729304,  Std :  0.271675
+	Category : fg_jpg  Mean : 0.851283,  Std :  0.270902
+	Category : mask_black_jpg  Mean : 0.068877,  Std :  0.249513
+	Category : mask_jpg  Mean : 0.276214,  Std :  0.436924
+	
       
       
  # 4. Explain how you created your dataset
