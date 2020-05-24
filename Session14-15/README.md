@@ -70,7 +70,7 @@ In total we MUST have:
      ## a. how were fg created with transparency
      
      We used GIMP tool to generate foreground images with transparency. The full steps with screenshots are givne in:     
-     https://github.com/monimoyd/15A_Generate_Mask_Depth_Dataset/blob/master/ImageCreationSteps.pdf
+    
 
      ## b. how were masks created for fgs
      
@@ -122,12 +122,7 @@ Mask image creation
   4) Your mask is ready. Now it is time to export the file. For exporting go to ‘file’ tab on the top menu. Click on ‘export as’. As soon as you click a new window will appear. On the window you have to select the location where you have to export the file. If you want to change the image type then you have to go to ’select file type (by extension)’ and press ‘export’. Then you will be prompted by another window. Just press ‘export’ and the image will be exported   
 
   ![](https://github.com/sudhakarmlal/EVA4/blob/master/Session14-15/Images/Screen9.png)  
-  
-  
-  The PDF file for the same is also available at
-  
-   https://github.com/monimoyd/15A_Generate_Mask_Depth_Dataset/blob/master/ImageCreationSteps.pdf
-		
+ 		
 
 		
    ## c. how did you overlay the fg over bg and created 20 variants
