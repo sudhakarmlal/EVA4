@@ -1,14 +1,12 @@
 
-# Link to GoogleDrive for the complete dataset:
-
-https://drive.google.com/open?id=1o5hPttBP_x5GD37AFYJQ41rvJ9Xdb8n0
-
-# 15A_Generate_Mask_Depth_Dataset
-This assignmnet is to create dataset of mask and depth datasets from foreground and background images
+# Assigment 15 Predict DepthMap and Mask
+This assignment is to generate DepthMap and Mask
 
 # 1.  Problem Statement
 
-We need to generate custom dataset we  must have 100 background, 100x2 (including flip), and you randomly place the foreground on the background 20 times, you have in total 100x200x20 images. 
+We need to  generate DepthMap and Mask.The DataSet available for this Assignment  is as below:
+
+100 background, 100x2 (including flip), and you randomly place the foreground on the background 20 times, you have in total 100x200x20 images. 
 
 In total we MUST have:
 
@@ -18,15 +16,47 @@ In total we MUST have:
     generated from:
      100 backgrounds
      100 foregrounds, plus their flips
-     20 random placement on each background.
-     
-     
-     We need to show the statistics of the generated images as well as create a gallery
-     
-# 2. Link ot Gdrive for the images
-     
-     https://drive.google.com/open?id=1o5hPttBP_x5GD37AFYJQ41rvJ9Xdb8n0
-     
+     20 random placement on each background
+
+
+# Link to GoogleDrive for the complete dataset:
+
+https://drive.google.com/open?id=1o5hPttBP_x5GD37AFYJQ41rvJ9Xdb8n0
+
+# The dataset generated for this assigment is created as part of 15A_Generate_Mask_Depth_Dataset
+Check the README.md for mode details on 15A for generate of DataSet for Foreground,BackGround,ForeGround-BackGroud,Mask,Mask_Fg_Bg,
+Depth Image.
+
+Also check the CodeBase available at 
+
+https://github.com/sudhakarmlal/EVA4/tree/master/Session14-15
+
+Details:
+
+1.Image creation steps through GIMP tool:
+https://github.com/sudhakarmlal/EVA4/blob/master/Session14-15/ImageCreationSteps.pdf
+
+2.Generate Fg_Bg Images:
+https://github.com/sudhakarmlal/EVA4/blob/master/Session14-15/generate_fg_bg_images_jpg.py
+
+3.Generating Dense Depth Images:
+
+https://github.com/sudhakarmlal/EVA4/blob/master/Session14-15/DenseDepth.ipynb
+
+4.Findig the mean and standard deviation of the images
+
+https://github.com/sudhakarmlal/EVA4/blob/master/Session14-15/imagestats_std_mean.py
+
+5.Generating Dense Depth Images:
+
+https://github.com/sudhakarmlal/EVA4/blob/master/Session14-15/DenseDepth.ipynb
+
+
+5. GalleryUtil to generate the Gallery of images for Mask,ForeGroup,Backgroupd,Fg_Bg,Mask_Fg_Bg,DepthImages
+https://github.com/sudhakarmlal/EVA4/blob/master/Session14-15/GalleryUtil.ipynb
+
+Finally the following are generated:
+
      The directory contains 10 zip files (batch1_images.zip,batch2_images.zip, batch3_images.zip, batch4_images.zip, batch5_images.zip, batch6_images.zip batch7_images.zip, batch8_images.zip, batch9_images.zip, batch10_images.zip)
      
      Each zip file has the following folders:
@@ -44,20 +74,12 @@ In total we MUST have:
       
       depth_fg_bg_jpg: JPG images created using the depth model prediction on fg_bg images. The convention for depth_fg_bg_jp is same as corresponding fg_bg_jpg image from which it is generated, only depth_ is prepended to image name.
       
-# 3. Add your dataset statistics:
-        Kinds of images : (fg, bg, fg_bg, masks, depth)
-        Total images of each kind:
-	fg : 100
-	bg: 100
-	mask: 100
-	fg_bg: 400000
-	depth: 400000
-	mask overlaued on black background: 400000
-	
-        The total size of the dataset: 6 GB
-        Mean/STD values: 
-		
-	
+
+Also find the mean/standard deviation of the Different set of images(Generated from):
+
+https://github.com/sudhakarmlal/EVA4/blob/master/Session14-15/imagestats_std_mean.py
+(This would be later used by the Model)
+
 	Category : bg_jpg  Mean : 0.739088,  Std :  0.265235	
 	Category : depth_fg_bg_jpg  Mean : 0.777681,  Std :  0.311899
 	Category : fg_bg_jpg  Mean : 0.729304,  Std :  0.271675
