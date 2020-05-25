@@ -310,8 +310,7 @@ Once you have the MasterDataSet available it can be used to feed to the train da
 
 The following Models are tried for generating DepthModel and MaskImages:
 
-## Note:Have tried multiple models but The following two different models are what been considered.The output for these two models only
-## shown in the later steps.
+## Note:Have tried multiple models but The following two different models are what been considered.The output for these two models only shown in the later steps.
 
 
 ### Mode11(Generates both Depth and MaskOutput):
@@ -429,8 +428,143 @@ The following Models are tried for generating DepthModel and MaskImages:
         return y, x
 
 
-### Mode12(Generates  generate only MaskOutput):
+### Mode12(Generates both Mask and Depth Output but only MaskOutput considered as it showed good results for MaskOUtput):
+    
+    class ConvGen(nn.Module):
+    def __init__(self):
+        super(ConvGen, self).__init__()
+
+        self.convblock1 = nn.Sequential(
+            nn.Conv2d(3,32,3, stride=1, padding=1, bias=False),
+            nn.BatchNorm2d(32),
+            nn.ReLU(),
+        )
+        self.convblock2 = nn.Sequential(
+            nn.Conv2d(32,32,3, stride=1, padding=1, bias=False, groups=32),
+            nn.Conv2d(32,64,1, stride=1, padding=0, bias=False),
+            nn.BatchNorm2d(64),
+            nn.ReLU(),
+        )
+        self.convblock3 = nn.Sequential(
+            nn.Conv2d(128,256,3, stride=1, padding=1, bias=False),
+            nn.BatchNorm2d(256),
+            nn.ReLU(),
+        )
+        self.convblock4 = nn.Sequential(
+            nn.Conv2d(256,3,3, stride=1, padding=1, bias=False)            
+        )
         
+    def forward(self, x):
+        bg_image = x["bg_image"]
+        fg_bg_image = x["fg_bg_image"]        
+        bg_image = self.convblock2(self.convblock1(bg_image))
+        fg_bg_image = self.convblock2(self.convblock1(fg_bg_image))
+        f= torch.cat([bg_image,fg_bg_image], dim=1)
+        f = self.convblock4(self.convblock3(f))
+        return f
+        
+
+# 6 Defining the Loss Criterion for the Model:
+
+## Model1 Loss Criterion:
+
+Two different  Loss criterions are defined for the Outputs of Model1.
+###  The BCEWithLogitsLoss() criterion is for the MaskOutput
+###  The SSIM criterion is for the  Depth Output from the Model
+ 	from torch.optim.lr_scheduler import StepLR
+	from kornia.losses import SSIM
+	criterion1 = nn.BCEWithLogitsLoss()
+	criterion2 = SSIM(3, reduction="mean" )
+### The following derivation is used in order to combine both the losses i.e total loss is  2*loss1 + loss2
+###  Where loss1 is MaskOutput Loss and Loss2 is DepthOutput Loss 
+       
+           loss1 = criterion1(output[0],data["ms_bg_image"])
+           loss2 = criterion2(output[1],data["dp_image"])
+           loss = 2*loss1 + loss2
+	   
+
+# 7 Show Output Utility for the Model:
+
+The Output Mask and Depth Images to be showed or stored in Google drive.For the same the following utility is written:
+
+            IMG_DIR = "./gdrive/My Drive/MASK1/S15/out_images3"
+	   def saveimage(tensors, name, figsize=(50,50), *args, **kwargs):
+  	   	filename= IMG_DIR+ name
+  	   	try:
+    			tensors = tensors.detach().cpu()
+  			except: 
+    				pass
+  		grid_tensor1= torchvision.utils.make_grid(tensors,*args, **kwargs)
+  		grid_image1= grid_tensor1.permute(1,2,0)
+  		plt.figure(figsize=figsize)
+  		plt.imshow(grid_image1)
+  		plt.xticks([])
+  		plt.yticks([])
+  		plt.savefig(filename, bbox_inches = 'tight')
+  		plt.show()
+		
+# 8 Training the  Model:
+The below code snippnet shows the function to train the Model.Note the train function accepts the following arguments.
+
+
+	def train( batch, model,scheduler, criterion1,criterion2, device, train_loader, optimizer, epoch,iteration,writer):
+  		other_time = 0
+  		correct = 0
+  		start = time()
+  		other_s = time()
+  		model.train()
+  		other_e = time()
+  		other_time += other_e - other_s
+  		data_load_time = 0
+  		model_time = 0
+  		meow_time = 0
+  		pbar = tqdm(train_loader)
+  		for batch_idx, data in enumerate(pbar):
+    			other_s = time()
+    			optimizer.zero_grad()
+    			other_e = time()
+    			other_time += other_e - other_s
+    			load_s = time()
+    			data["bg_image"] = data["bg_image"].to(device)
+    			data["fg_bg_image"] = data["fg_bg_image"].to(device)
+    			data["ms_bg_image"] = data["ms_bg_image"].to(device)
+    			data["dp_image"] = data["dp_image"].to(device)
+    			load_e = time()
+    			data_load_time += load_e - load_s
+    			model_s = time() 
+    			optimizer.zero_grad()
+    			output=model(data)    
+    			#loss= criterion(output,data["ms_bg_image"])
+    			#loss1 = criterion(output[0],data["ms_bg_image"])
+    			#loss2 = criterion(output[1],data["dp_image"])
+    			loss1 = criterion1(output[0],data["ms_bg_image"])
+    			loss2 = criterion2(output[1],data["dp_image"])
+    			loss = 2*loss1 + loss2
+    			pbar.set_description(desc= f'l1={round(loss1.item(),4)} l2={round(loss2.item(),4)}')
+    			loss.backward()
+    			optimizer.step()
+    			model_e = time()
+    			model_time += model_e - model_s
+    			other_s = time()
+    			if batch_idx % 250 == 0:
+      				writer.add_scalar('training loss', loss.item() / 1000, epoch * iteration + batch_idx)
+    			if batch_idx % 10 == 0:
+      				torch.cuda.empty_cache()
+    			if batch_idx % 50 == 0:
+      				print('Train Epoch : {} [{}/{} ({:.0f}%)]\tLoss: 		{:.6f}'.format(epoch,batch_idx*len(data),len(train_loader.dataset), 
+                                                                    100.*batch_idx/len(train_loader), loss.item()))
+    			if epoch == 4:
+      				if batch_idx % iteration == 0:
+        				saveimage(data["fg_bg_image"], f"/{batch}_3CFGBGORG.jpg")
+        				saveimage(output[0], f"/{batch}_3CMSBGPDCT.jpg")
+        				saveimage(data["ms_bg_image"], f"/{batch}_3CMSBGORG.jpg")
+        				saveimage(output[1], f"/{batch}_3CDPBGPDCT.jpg")      
+        				saveimage(data["dp_image"], f"/{batch}_3CDPBGORG.jpg")  
+    			other_e = time()
+    			other_time += other_e - other_s
+  		end = time()
+
+
 
  1) Open foreground image in GIMP    
 
