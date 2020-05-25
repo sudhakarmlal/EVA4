@@ -584,6 +584,38 @@ The below code is used to execute the mode.The Model is saved after the executio
     			train( batch, model,scheduler, criterion1,criterion2, device, train_dl, optim, epoch,iteration,writer)
     			scheduler.step()  
   			torch.save(model.state_dict(), PATH/f"modelup3C_{batch}.pth")
+			
+# 9 Model Loss Output :
+
+Below is the Loss Output for:
+
+Model1:
+
+
+Model2:
+
+# 10 Model Output Images :
+
+Below are the sample ouput depth images generated out of Model1 and sample mask images generated out of Model2:
+
+Depth Images:
+
+![](https://github.com/sudhakarmlal/EVA4/blob/master/Session15/Images/out_images3out2.jpg)
+
+v/s 
+
+The actual Depth Images:
+![](https://github.com/sudhakarmlal/EVA4/blob/master/Session15/Images/out_images3db_image.jpg)
+
+
+
+https://github.com/sudhakarmlal/EVA4/blob/master/Session15/Images/out_images3out2.jpg
+
+Mask Images:
+
+
+# 11 Timings recorded for DataLoading,ModelExecution and Other timings :
+
 
 
  1) Open foreground image in GIMP    
