@@ -2,7 +2,7 @@
 # Assigment 15 Predict DepthMap and Mask
 This assignment is to generate DepthMap and Mask
 
-# 1.  Problem Statement
+# 1.  Problem Statement:
 
 We need to  generate DepthMap and Mask.The DataSet available for this Assignment  is as below:
 
@@ -19,7 +19,7 @@ In total we MUST have:
      20 random placement on each background
 
 
-# DataSet Preparation:
+# 2. DataSet Generation:
 
 ### Link to GoogleDrive for the complete dataset:
 
@@ -91,7 +91,7 @@ https://github.com/sudhakarmlal/EVA4/blob/master/Session14-15/imagestats_std_mea
 	
       
       
- # 4. Explain how you created your dataset
+ # 3 DataExtraction,Data Mapping,Data preparation for TrainDataLoader
      ## a. how were fg created with transparency
      
      We used GIMP tool to generate foreground images with transparency. The full steps with screenshots are givne in:     
