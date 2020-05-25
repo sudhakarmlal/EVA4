@@ -107,6 +107,62 @@ https://github.com/sudhakarmlal/EVA4/blob/master/Session14-15/imagestats_std_mea
   
   ####  !unzip /content/drive/'My Drive'/MASK1/batch1_images.zip  -d /content/drive/'My Drive'/MASK1/batch_images
   
+  Once the data is extracted it's available to read.The following code is used to read  IMAGES
+  #### At a time we read data per batch.Also we  feed 1 batch data only  to train-data-loader at a time due to resource constraints.
+  
+  
+  The following code expains how the data is read int various python variables:
+  
+          BG_DIR = "/content/gdrive/My Drive/MASK1/batch_images1/bg_jpg"
+          FG_DIR = "/content/gdrive/My Drive/MASK1/batch_images1/fg_jpg"
+          MASK_DIR = "/content/gdrive/My Drive/MASK1/batch_images1/mask_black_jpg"
+          DP_DIR = "/content/gdrive/My Drive/MASK1/batch_images1/depth_fg_bg_jpg"
+          FG_BG_DIR = "/content/gdrive/My Drive/MASK1/batch_images1/fg_bg_jpg"
+	  
+	  
+	  def get_img_file_names(path):
+  	     img_file_names =[]
+  	     for root, dirs, files in os.walk(path):
+                for filename in files:
+                    #if img_file is not None:
+                    #print(filename)
+                    img_file_names.append(path + '/' + filename)  
+                    return img_file_names
+      
+        bg_file_names = get_img_file_names(BG_DIR)
+	fg_file_names =get_img_file_names(FG_DIR)
+	mask_file_names =get_img_file_names(MASK_DIR)
+	dp_file_names =get_img_file_names(DP_DIR)
+	fg_bg_file_names =get_img_file_names(FG_BG_DIR)
+		    
+Since,there are 10 Foreground Images ,100 Foreground Images,40000 mask_fg_bg,40000 depth,40000 fg_bg Images.
+It's going to generate the following(per batch):
+
+          bg_file_names  : 100
+	  fg_file_names  : 10
+          mask_file_names : 40,000
+	  dp_file_names : 40,000
+	  fg_bg_file_names : 40,000
+	  
+### Data Mapping:
+       
+The below diagram explains how the data has to be mapped in order to feed it to the traindata loader.
+
+![](https://github.com/sudhakarmlal/EVA4/blob/master/Session15/Images/TrainingDataLoader.gif) 
+
+
+#### This Mapping is required in order to generate 40,000 data objects for each of the  bg,fg,mask(fg-bg),depth,fg-bg in order to feed to the train_dataloader.
+
+  
+        Category : bg_jpg  Mean : 0.739088,  Std :  0.265235	
+	Category : depth_fg_bg_jpg  Mean : 0.777681,  Std :  0.311899
+	Category : fg_bg_jpg  Mean : 0.729304,  Std :  0.271675
+	Category : fg_jpg  Mean : 0.851283,  Std :  0.270902
+	Category : mask_black_jpg  Mean : 0.068877,  Std :  0.249513
+	Category : mask_jpg  Mean : 0.276214,  Std :  0.436924
+  
+  
+  
      ## a. how were fg created with transparency
      
      We used GIMP tool to generate foreground images with transparency. The full steps with screenshots are givne in:     
