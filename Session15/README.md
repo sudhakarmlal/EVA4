@@ -612,7 +612,12 @@ The below are the MaskedImages output generated out of the Model2
 ![](https://github.com/sudhakarmlal/EVA4/blob/master/Session15/Images/download3.png)
 ![](https://github.com/sudhakarmlal/EVA4/blob/master/Session15/Images/download2.png)
 
-![](https://github.com/sudhakarmlal/EVA4/blob/master/Session15/Images/download.png)
+![](https://github.com/sudhakarmlal/EVA4/blob/master/Session15/Images/download.png)'
+
+Check this outputs v/s the actual sample Mask Images:
+
+![](https://github.com/sudhakarmlal/EVA4/blob/master/Session15/Images/out_images3mask.jpg)'
+
 
 # 11 Timings recorded for DataLoading,ModelExecution and Other timings :
 
