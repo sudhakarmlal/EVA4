@@ -92,6 +92,12 @@ https://github.com/sudhakarmlal/EVA4/blob/master/Session14-15/imagestats_std_mea
       
       
  # 3 DataExtraction,Data Mapping,Data preparation for TrainDataLoader
+ 
+ ### DataLayout:
+ 
+ The below is the datalayout for the data created as part of Step2(DataSet generation)
+ 
+ ![](https://github.com/sudhakarmlal/EVA4/blob/master/Session15/Images/DataLayout.gif) 
      ## a. how were fg created with transparency
      
      We used GIMP tool to generate foreground images with transparency. The full steps with screenshots are givne in:     
