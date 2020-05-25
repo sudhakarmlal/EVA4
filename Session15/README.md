@@ -19,11 +19,13 @@ In total we MUST have:
      20 random placement on each background
 
 
-# Link to GoogleDrive for the complete dataset:
+# DataSet Preparation:
+
+### Link to GoogleDrive for the complete dataset:
 
 https://drive.google.com/open?id=1o5hPttBP_x5GD37AFYJQ41rvJ9Xdb8n0
 
-# The dataset generated for this assigment is created as part of 15A_Generate_Mask_Depth_Dataset
+### The dataset generated for this assigment is created as part of 15A_Generate_Mask_Depth_Dataset
 Check the README.md for mode details on 15A for generate of DataSet for Foreground,BackGround,ForeGround-BackGroud,Mask,Mask_Fg_Bg,
 Depth Image.
 
