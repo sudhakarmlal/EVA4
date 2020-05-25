@@ -151,7 +151,7 @@ The below diagram explains how the data has to be mapped in order to feed it to 
 ![](https://github.com/sudhakarmlal/EVA4/blob/master/Session15/Images/TrainingDataLoader.gif) 
 
 
-#### This Mapping is required in order to generate 40,000 data objects for each of the  bg,fg,mask(fg-bg),depth,fg-bg in order to feed to the train_dataloader.
+#### This Mapping is required in order to generate 40,000 data objects(batch1) for each of the  bg,fg,mask(fg-bg),depth,fg-bg in order to feed to the train_dataloader.
 
 Below code explains whatever demonstrated in the above diagram:
 
@@ -172,7 +172,7 @@ Below code explains whatever demonstrated in the above diagram:
   		forground_image_names.append(fg_name)
 
 	for i in range(len(forground_image_names)):
-  		for j in range(40):
+  		for j in range(len(bg_file_names)):
     			print(bg_file_names[j])
     			bg_str = bg_file_names[j].split('_')[-1]
     			print(bg_str[0:bg_str.rfind('.jpg')])
@@ -206,25 +206,96 @@ Below code explains whatever demonstrated in the above diagram:
 
 
   
-        Category : bg_jpg  Mean : 0.739088,  Std :  0.265235	
-	Category : depth_fg_bg_jpg  Mean : 0.777681,  Std :  0.311899
-	Category : fg_bg_jpg  Mean : 0.729304,  Std :  0.271675
-	Category : fg_jpg  Mean : 0.851283,  Std :  0.270902
-	Category : mask_black_jpg  Mean : 0.068877,  Std :  0.249513
-	Category : mask_jpg  Mean : 0.276214,  Std :  0.436924
-  
-  
-  
-     ## a. how were fg created with transparency
-     
-     We used GIMP tool to generate foreground images with transparency. The full steps with screenshots are givne in:     
-    
 
-     ## b. how were masks created for fgs
+# 4 Preparing Data for training and Training Strategy
      
-  Masks were created using GIP tool, Full steps with screenshots are given in
+  The DataExtraction,DataMapping generate only the filenames.The images objects has to be created to feed it to the Model.
   
-  Creation of the data set Foreground image creation with transparency
+  The below code is used to create the DataSet of Images:
+  
+  
+  	class MasterDataset(Dataset):
+  		def __init__(self,  transform= None, bg_files= None, fg_bg_files= None, ms_bg_files= None, dp_files= None):
+    			self.bg_files= bg_files
+    			self.fg_bg_files= fg_bg_files
+    			self.ms_bg_files= ms_bg_files
+    			self.dp_files= dp_files
+    			#self.ms_bg_files= list([y for x in os.walk(MASK_DIR) for y in glob(os.path.join(x[0], '*.jpg'))]) 
+    			#self.bg_files= list(BG_DIR.glob('*.jpg'))   
+    			self.transform = transform
+  
+
+  		def __len__(self):
+    			return len(self.bg_files)
+
+  		def __getitem__(self,index):
+    			bg_image = Image.open(self.bg_files[index])
+    			fg_bg_image = Image.open(self.fg_bg_files[index])
+    			ms_bg_image = Image.open(self.ms_bg_files[index])
+    			dp_image = Image.open(self.dp_files[index])
+    			if self.transform:
+      				bg_image = self.transform(bg_image)
+      				fg_bg_image = self.transform(fg_bg_image)
+      				ms_bg_image = self.transform(ms_bg_image)
+      				dp_image = self.transform(dp_image)
+    		return {'bg_image' : bg_image,'fg_bg_image' : fg_bg_image,'ms_bg_image' : ms_bg_image, 'dp_image' : dp_image }
+
+To call the above MasterDataSet The following transform is created:
+
+The below takes some standard values for mean and standard deviation.The following code should have been used to generate mean and standard deviation https://github.com/sudhakarmlal/EVA4/blob/master/Session14-15/imagestats_std_mean.py
+
+    	 mean, std = torch.tensor([0.485,0.456,0.406])*255, torch.tensor([0.229,0.224,0.225])*255
+	 train_transform = transforms.Compose([
+                  transforms.Resize((64,64)),
+                  transforms.Grayscale(num_output_channels=3),
+                  transforms.ToTensor()
+	])
+We can now feed to create the MasterDataSet:
+#### Note: We are feeding the filenames only to the MasterDataSet class and created ImageObjects out of it by applying the transform in the above code.
+
+     train_ds = MasterDataset(train_transform, bg_dp_img_names, fg_bg_img_names, mask_img_names,dp_img_names)
+     
+### Training Strategy due to  resource & memory constraints:
+
+We need to apply the following training strategy as we hava a memory constraints.We can't feed all the 40K(Batch1) images as it takes huge time to run on google colab and some times it hangs.
+
+## Tried  training 40K images in one shot it takes almost 12-14 hours in Google colab.Hence has to come up with a training strategy.
+
+The below diagram explains the dataset to be fed to the traindataloader which is a subset of 40K(1st Batch)
+
+#### Training Strategy 1:
+
+The below digram explains the training strategy1.In this we would be feeing only  4000 Images to the TrainDataLoader
+![](https://github.com/sudhakarmlal/EVA4/blob/master/Session15/Images/TrainingLayout1.gif)
+
+  The below is the code snippet of the Mapping code(explained in Step3.DataMapping section) that has to be changed in order to generate     4000 images:	
+	   
+	    for i in range(len(forground_image_names)):
+  		for j in range(10):
+    			print(bg_file_names[j])
+    			bg_str = bg_file_names[j].split('_')[-1]
+    			print(bg_str[0:bg_str.rfind('.jpg')])
+    			bg_num  = bg_str[0:bg_str.rfind('.jpg')]
+
+
+#### Training Strategy 2:
+
+The below digram explains the training strategy2.In this we would be feeing only  16,000 Images to the TrainDataLoader
+
+![](https://github.com/sudhakarmlal/EVA4/blob/master/Session15/Images/TrainingLayout2.gif)
+
+	
+	
+
+The below is the code snippet of the Mapping code(explained in Step3.DataMapping section) that has to be changed in order to generate 16000 images:
+
+	
+	for i in range(len(forground_image_names)):
+  		for j in range(40):
+    			print(bg_file_names[j])
+    			bg_str = bg_file_names[j].split('_')[-1]
+    			print(bg_str[0:bg_str.rfind('.jpg')])
+    			bg_num  = bg_str[0:bg_str.rfind('.jpg')]
 
  1) Open foreground image in GIMP    
 
