@@ -587,18 +587,15 @@ The below code is used to execute the mode.The Model is saved after the executio
 			
 # 9 Model Loss Output :
 
-Below is the Loss Output for:
+Below is the Loss Output generated out of the Model:
 
-Model1:
-
-
-Model2:
+![](https://github.com/sudhakarmlal/EVA4/blob/master/Session15/Images/ModelExecutionLogs.gif)
 
 # 10 Model Output Images :
 
 Below are the sample ouput depth images generated out of Model1 and sample mask images generated out of Model2:
 
-Depth Images:
+Depth Images(Model1):
 
 ![](https://github.com/sudhakarmlal/EVA4/blob/master/Session15/Images/out_images3out2.jpg)
 
@@ -608,15 +605,15 @@ The actual Depth Images:
 ![](https://github.com/sudhakarmlal/EVA4/blob/master/Session15/Images/out_images3db_image.jpg)
 
 
-
-https://github.com/sudhakarmlal/EVA4/blob/master/Session15/Images/out_images3out2.jpg
-
 Mask Images:
 
+The below are the MaskedImages output generated out of the Model2
+
+![](https://github.com/sudhakarmlal/EVA4/blob/master/Session15/Images/download.png)
 
 # 11 Timings recorded for DataLoading,ModelExecution and Other timings :
 
-
+![](https://github.com/sudhakarmlal/EVA4/blob/master/Session15/Images/ModelExectTime.gif)
 
  1) Open foreground image in GIMP    
 
