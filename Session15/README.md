@@ -153,6 +153,58 @@ The below diagram explains how the data has to be mapped in order to feed it to 
 
 #### This Mapping is required in order to generate 40,000 data objects for each of the  bg,fg,mask(fg-bg),depth,fg-bg in order to feed to the train_dataloader.
 
+Below code explains whatever demonstrated in the above diagram:
+
+        forground_image_names = []
+	bg_mask_img_names = []
+	bg_dp_img_names = []
+	bg_fg_bg_img_names = []
+
+	mask_img_names  = []
+	dp_img_names = []
+	fg_images_names = []
+	fg_bg_img_names = []
+
+	for i in range(len(fg_file_names)):
+  		fg_str = fg_file_names[i].split('/')[-1]
+  		fg_name = fg_str[0:fg_str.rfind('.jpg')]
+  		print(fg_name)
+  		forground_image_names.append(fg_name)
+
+	for i in range(len(forground_image_names)):
+  		for j in range(40):
+    			print(bg_file_names[j])
+    			bg_str = bg_file_names[j].split('_')[-1]
+    			print(bg_str[0:bg_str.rfind('.jpg')])
+    			bg_num  = bg_str[0:bg_str.rfind('.jpg')]
+    			search_str_mask ="bg_mask"+forground_image_names[i][6:]
+    			search_str_mask = search_str_mask + "_" +bg_num+"_"
+    			print(search_str_mask)
+    			search_str_depth_fg_bg ="depth_fg_bg"+forground_image_names[i][6:]
+    			search_str_depth_fg_bg =search_str_depth_fg_bg + "_" +bg_num +"_"
+    			print(search_str_depth_fg_bg)
+
+    			search_str_fg_bg ="fg_bg"+forground_image_names[i][6:]
+    			search_str_fg_bg =search_str_fg_bg + "_" +bg_num +"_"
+    			print(search_str_fg_bg)
+  
+    				for k in range(len(mask_file_names)):
+      					mask_str = mask_file_names[k].split('/')[-1]
+      					fg_depth_bg_str =dp_file_names[k].split('/')[-1]
+      					fg_bg_str = fg_bg_file_names[k].split('/')[-1]
+      					if mask_str.startswith(search_str_mask):
+        					mask_img_names.append(mask_file_names[k])
+        					bg_mask_img_names.append(bg_file_names[j])
+      					if fg_bg_str.startswith(search_str_fg_bg):
+        					fg_bg_img_names.append(fg_bg_file_names[k])
+        					bg_fg_bg_img_names.append(bg_file_names[j])
+        					#fg_images_names.append(fg_file_names[i])  
+      					if fg_depth_bg_str.startswith(search_str_depth_fg_bg):
+        					dp_img_names.append(dp_file_names[k])
+        					bg_dp_img_names.append(bg_file_names[j])
+        					fg_images_names.append(fg_file_names[i]) 
+
+
   
         Category : bg_jpg  Mean : 0.739088,  Std :  0.265235	
 	Category : depth_fg_bg_jpg  Mean : 0.777681,  Std :  0.311899
