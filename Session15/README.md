@@ -297,6 +297,141 @@ The below is the code snippet of the Mapping code(explained in Step3.DataMapping
     			print(bg_str[0:bg_str.rfind('.jpg')])
     			bg_num  = bg_str[0:bg_str.rfind('.jpg')]
 
+## I decided to go for training strategy2.Running model for training strategy2 took 3-4 hours for  16000 imaages.
+
+Once you have the MasterDataSet available it can be used to feed to the train dataloader.
+
+	train_dl = DataLoader(train_ds, batch_size=16, shuffle = True, pin_memory=True)
+	sample = next( iter(train_dl))
+	type(sample)
+	
+
+# 5 Defining the Model
+
+The following Models are tried for generating DepthModel and MaskImages:
+
+## Note:Have tried multiple models but The following two different models are what been considered.The output for these two models only
+## shown in the later steps.
+
+
+### Mode11(Generates both Depth and MaskOutput):
+
+
+
+    class Net(nn.Module):
+      def __init__(self):
+        super(Net, self).__init__()
+
+        self.input_layer = nn.Sequential(
+            nn.Conv2d(in_channels=6, out_channels=64, kernel_size=(3, 3), padding=(1, 1), stride=(1, 1), bias=False),
+            nn.BatchNorm2d(64),
+            nn.ReLU()
+        )
+        self.layer1 = nn.Sequential(
+            nn.Conv2d(in_channels=64, out_channels=128, kernel_size=(3, 3), padding=(1, 1), stride=(1, 1), bias=False),
+            # nn.MaxPool2d(2, 2),
+            nn.BatchNorm2d(128),
+            nn.ReLU()
+        )
+        self.resblock1 = nn.Sequential(
+            nn.Conv2d(in_channels=128, out_channels=128, kernel_size=(3, 3), padding=(1, 1), stride=(1, 1), bias=False),
+            nn.BatchNorm2d(128),
+            nn.ReLU(),
+            nn.Conv2d(in_channels=128, out_channels=128, kernel_size=(3, 3), padding=(1, 1), stride=(1, 1), bias=False),
+            nn.BatchNorm2d(128),
+            nn.ReLU()
+        )
+        self.layer2 = nn.Sequential(
+            nn.Conv2d(in_channels=128, out_channels=256, kernel_size=(3, 3), padding=(1, 1), stride=(1, 1), bias=False),
+            # nn.MaxPool2d(2, 2),
+            nn.BatchNorm2d(256),
+            nn.ReLU()
+        )
+        self.layer3 = nn.Sequential(
+            nn.Conv2d(in_channels=256, out_channels=256, kernel_size=(3, 3), padding=(1, 1), stride=(1, 1), bias=False),
+            # nn.MaxPool2d(2, 2),
+            nn.BatchNorm2d(256),
+            nn.ReLU()
+        )
+        self.resblock2 = nn.Sequential(
+            nn.Conv2d(in_channels=256, out_channels=256, kernel_size=(3, 3), padding=(1, 1), stride=(1, 1), bias=False),
+            nn.BatchNorm2d(256),
+            nn.ReLU(),
+            nn.Conv2d(in_channels=256, out_channels=256, kernel_size=(3, 3), padding=(1, 1), stride=(1, 1), bias=False),
+            nn.BatchNorm2d(256)
+        )
+
+        self.layer4 = nn.Sequential(
+            nn.Conv2d(256, 3, 3, stride=1, padding=1, bias=False)
+        )
+
+        self.layer5 = nn.Sequential(
+            nn.Conv2d(in_channels=3, out_channels=32, kernel_size=(3, 3), padding=(1, 1), stride=(1, 1), bias=False),
+            nn.BatchNorm2d(32),
+            nn.ReLU(),
+        )
+
+        self.layer6 = nn.Sequential(
+            nn.Conv2d(in_channels=32, out_channels=64, kernel_size=(3, 3), padding=(1, 1), stride=(1, 1), bias=False,
+                      groups=32),
+            nn.Conv2d(in_channels=64, out_channels=128, kernel_size=(1, 1), padding=(0, 0), stride=(1, 1), bias=False),
+            nn.BatchNorm2d(128),
+            nn.ReLU(),
+        )
+
+        self.layer7 = nn.Sequential(
+            nn.Conv2d(in_channels=256, out_channels=256, kernel_size=(3, 3), padding=(1, 1), stride=(1, 1), bias=False),
+            nn.Conv2d(in_channels=256, out_channels=512, kernel_size=(1, 1), padding=(0, 0), stride=(1, 1), bias=False),
+            nn.BatchNorm2d(512),
+            nn.ReLU(),
+        )
+
+        self.layer8 = nn.Sequential(
+            nn.Conv2d(in_channels=512, out_channels=512, kernel_size=(3, 3), padding=(1, 1), stride=(1, 1), bias=False),
+            nn.Conv2d(in_channels=512, out_channels=512, kernel_size=(1, 1), padding=(0, 0), stride=(1, 1), bias=False),
+            nn.BatchNorm2d(512),
+            nn.ReLU(),
+        )
+
+        self.layer9 = nn.Sequential(
+            nn.Conv2d(in_channels=512, out_channels=256, kernel_size=(3, 3), padding=(1, 1), stride=(1, 1), bias=False),
+            nn.BatchNorm2d(256),
+            nn.ReLU(),
+        )
+        self.layer10 = nn.Sequential(
+            nn.Conv2d(256, 3, 3, padding=(1, 1), stride=(1, 1), bias=False)
+        )
+
+    def forward(self, x):
+        bg_image = x["bg_image"]
+        fg_bg_image = x["fg_bg_image"]
+        x = torch.cat([bg_image, fg_bg_image], dim=1)
+        x = self.input_layer(x)
+        x = self.layer1(x)
+        r1 = self.resblock1(x)
+        x = x + r1
+        x = self.layer2(x)
+        x = self.layer3(x)
+        r2 = self.resblock2(x)
+        x = x + r2
+        x = self.layer4(x)
+        # print(x.shape)
+
+        y1 = self.layer5(bg_image)
+        y1 = self.layer6(y1)
+        y2 = self.layer5(fg_bg_image)
+        y2 = self.layer6(y2)
+        y = torch.cat([y1, y2], dim=1)
+        y = self.layer7(y)
+        y = self.layer8(y)
+        y = self.layer9(y)
+        y = self.layer10(y)
+        return y, x
+
+
+### Mode12(Generates  generate only MaskOutput):
+        
+
  1) Open foreground image in GIMP    
 
 ![](https://github.com/sudhakarmlal/EVA4/blob/master/Session14-15/Images/Screen1.png)  
