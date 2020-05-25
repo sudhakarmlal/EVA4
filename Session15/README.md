@@ -98,6 +98,15 @@ https://github.com/sudhakarmlal/EVA4/blob/master/Session14-15/imagestats_std_mea
  The below is the datalayout for the data created as part of Step2(DataSet generation)
  
  ![](https://github.com/sudhakarmlal/EVA4/blob/master/Session15/Images/DataLayout.gif) 
+  
+  As explained in the diagram the DataSet contains  10 Batches each batch has  40,000 Images(corresponding to 10 Foregrounds)
+  
+  ### Data Extraction:
+  As a part of data extraction .All the 10 Zip files are loaded into the GoogleDrive .The Data would be extracted in Google Drive
+  by running the following(e.g for batch1)
+  
+  ####  !unzip /content/drive/'My Drive'/MASK1/batch1_images.zip  -d /content/drive/'My Drive'/MASK1/batch_images
+  
      ## a. how were fg created with transparency
      
      We used GIMP tool to generate foreground images with transparency. The full steps with screenshots are givne in:     
